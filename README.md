@@ -52,3 +52,14 @@ _________________________________
 * Job Search API
 * Mobile Responsiveness
 _________________________________
+
+## _Technology Implemented_:
+
+* React
+* Node.js
+* Heroku
+* GitHub
+* MongoDB
+* JSON Web Token Authorization
+* Chajr
+_________________________________
