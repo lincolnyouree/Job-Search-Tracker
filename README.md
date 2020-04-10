@@ -1,6 +1,7 @@
 # __Job Search Tracker__
 
 * Click [here]() to view the app! 
+_________________________________
 
 ## _Trello_:
 
@@ -15,10 +16,12 @@ _________________________________
 ## _ERD_:
 
 ![Wireframe](https://i.imgur.com/MJONbEE.png)
+_________________________________
 
 ## _Wireframe_:
 
 ![Wireframe](https://i.imgur.com/RsxHbGF.png)
+_________________________________
 
 ## _Finished App_:
 
