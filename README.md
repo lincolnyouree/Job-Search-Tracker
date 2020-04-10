@@ -3,6 +3,11 @@
 * Click [here]() to view the app! 
 _________________________________
 
+## _Description_:
+
+* Full-stack CRUD app in React.js using JSON Web Token Authorization, MongoDB, and Heroku deploy.
+_________________________________
+
 ## _Trello_:
 
 * Click [here](https://trello.com/b/o0FYqJuq/job-search-tracker-react) to view the Trello board.
