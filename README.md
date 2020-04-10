@@ -45,3 +45,10 @@ _________________________________
 * Click Button to Delete Job from List
 * Click Button to Logout of Account
 _________________________________
+
+## _Stretch Goals_:
+
+* Add and Delete Photos
+* Job Search API
+* Mobile Responsiveness
+_________________________________
