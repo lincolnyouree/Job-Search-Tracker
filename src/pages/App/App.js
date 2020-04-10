@@ -3,17 +3,20 @@ import './App.css';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import JobsSecretPage from '../JobsSecretPage/JobsSecretPage'
+import JobsSecretPage from '../JobsSecretPage/JobsSecretPage';
 import * as jobAPI from '../../services/job-api';
 import * as userAPI from '../../services/user-api';
-import Job from '../../components/Job/Job'
-import NavBar from '../../components/NavBar/NavBar'
+import Job from '../../components/Job/Job';
+import NavBar from '../../components/NavBar/NavBar';
+import JobListPage from '../../pages/JobListPage/JobListPage';
+import AddJobPage from '../../pages/AddJobPage/AddJobPage';
+import EditJobPage from '../../pages/EditJobPage/EditJobPage';
 
 class App extends Component {
   state = {
     // Initialize user if there's a token, otherwise null
     user: userAPI.getUser(),
-    jobs: null
+    jobs: []
   };
 
   /*--------------------------- Callback Methods ---------------------------*/
@@ -32,6 +35,31 @@ class App extends Component {
   async componentDidMount() {
     const jobs = await jobAPI.index();
     this.setState({ jobs });
+  }
+
+  handleAddJob = async newJobData => {
+    const newJob = await jobAPI.create(newJobData);
+    this.setState(state => ({
+      jobs: [...state.jobs, newJob]
+    }), () => this.props.history.push('/'));
+  }
+  
+  handleDeleteJob= async id => {
+    await jobAPI.deleteOne(id);
+    this.setState(state => ({
+      jobs: state.jobs.filter(j => j._id !== id)
+    }), () => this.props.history.push('/'));
+  }
+  
+  handleUpdateJob = async updatedJobData => {
+    const updatedJob = await jobAPI.update(updatedJobData);
+    const newJobsArray = this.state.jobs.map(j => 
+      j._id === updatedJob._id ? updatedJob : j
+    );
+    this.setState(
+      {jobs: newJobsArray},
+      () => this.props.history.push('/')
+    );
   }
 
   /*-------------------------------- Render --------------------------------*/
