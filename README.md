@@ -35,3 +35,13 @@ _________________________________
 * As a User, I should be able to delete a job from my list.
 * As a User, I should be able to logout of my profile.
 _________________________________
+
+## _Pseudocode_: 
+
+* Click Button to Create Account
+* Click Button to Login to Account
+* Click Button to Add Job to List
+* Click Button to Update Job on List
+* Click Button to Delete Job from List
+* Click Button to Logout of Account
+_________________________________
