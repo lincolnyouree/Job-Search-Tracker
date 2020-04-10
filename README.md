@@ -11,3 +11,17 @@ _________________________________
 
 * As I transition into a new career field, I want to develop an efficient way to organize jobs of interest, applications submitted, and various notes about the interview process... 
 _________________________________
+
+## _ERD_:
+
+![Wireframe](https://i.imgur.com/MJONbEE.png)
+
+## _Wireframe_:
+
+![Wireframe](https://i.imgur.com/RsxHbGF.png)
+
+## _Finished App_:
+
+![Wireframe]()
+_________________________________
+
