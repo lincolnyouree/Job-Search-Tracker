@@ -3,17 +3,17 @@ import './App.css';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import TktksSecretPage from '../TktksSecretPage/TktksSecretPage'
-import * as tktkAPI from '../../services/tktk-api';
+import JobsSecretPage from '../JobsSecretPage/JobsSecretPage'
+import * as jobAPI from '../../services/job-api';
 import * as userAPI from '../../services/user-api';
-import Tktk from '../../components/Tktk/Tktk'
+import Job from '../../components/Job/Job'
 import NavBar from '../../components/NavBar/NavBar'
 
 class App extends Component {
   state = {
     // Initialize user if there's a token, otherwise null
     user: userAPI.getUser(),
-    tktks: null
+    jobs: null
   };
 
   /*--------------------------- Callback Methods ---------------------------*/
@@ -30,8 +30,8 @@ class App extends Component {
   /*-------------------------- Lifecycle Methods ---------------------------*/
 
   async componentDidMount() {
-    const tktks = await tktkAPI.index();
-    this.setState({ tktks });
+    const jobs = await jobAPI.index();
+    this.setState({ jobs });
   }
 
   /*-------------------------------- Render --------------------------------*/
@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome to Tktk</h1>
+        <h1>Welcome to Job</h1>
         <NavBar
           user={this.state.user}
           handleLogout={this.handleLogout}
@@ -57,14 +57,14 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-          <Route exact path='/tktk-secret' render={() => 
+          <Route exact path='/job-secret' render={() => 
             userAPI.getUser() ? 
-              <TktksSecretPage />
+              <JobsSecretPage />
             :
               <Redirect to='/login'/>
           }/>
           <Route exact path='/' render={() =>
-            <Tktk />
+            <Job />
           }/>
         </Switch>
       </div>

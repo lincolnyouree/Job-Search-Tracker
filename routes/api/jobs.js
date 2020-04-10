@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const tktksCtrl = require('../../controllers/tktks');
+const jobsCtrl = require('../../controllers/jobs');
 
 /*------------------------------ Public Routes ------------------------------*/
 
-router.get('/', checkAuth, tktksCtrl.index);
+router.get('/', checkAuth, jobsCtrl.index);
 
 /*----------------------------- Protected Routes ----------------------------*/
 
 // Process the token for only the routes below
 router.use(require('../../config/auth'));
-router.post('/', checkAuth, tktksCtrl.create);
+router.post('/', checkAuth, jobsCtrl.create);
 
 /*----------------------------- Helper Functions ----------------------------*/
 
