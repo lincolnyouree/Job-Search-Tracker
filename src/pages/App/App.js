@@ -14,12 +14,9 @@ import EditJobPage from '../../pages/EditJobPage/EditJobPage';
 
 class App extends Component {
   state = {
-    // Initialize user if there's a token, otherwise null
     user: userAPI.getUser(),
     jobs: []
   };
-
-  /*--------------------------- Callback Methods ---------------------------*/
 
   handleLogout = () => {
     userAPI.logout();
@@ -29,8 +26,6 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({user: userAPI.getUser()});
   }
-
-  /*-------------------------- Lifecycle Methods ---------------------------*/
 
   async componentDidMount() {
     const jobs = await jobAPI.index();
@@ -61,8 +56,6 @@ class App extends Component {
       () => this.props.history.push('/')
     );
   }
-
-  /*-------------------------------- Render --------------------------------*/
 
   render() {
     return (
