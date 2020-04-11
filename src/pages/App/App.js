@@ -8,6 +8,7 @@ import * as jobAPI from '../../services/job-api';
 import * as userAPI from '../../services/user-api';
 import Job from '../../components/Job/Job';
 import NavBar from '../../components/NavBar/NavBar';
+import JobCard from '../../components/Job/JobCard';
 import JobListPage from '../../pages/JobListPage/JobListPage';
 import AddJobPage from '../../pages/AddJobPage/AddJobPage';
 import EditJobPage from '../../pages/EditJobPage/EditJobPage';
