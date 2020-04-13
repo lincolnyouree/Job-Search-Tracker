@@ -1,4 +1,5 @@
 var Job = require('../models/job');
+var User = require('../models/user');
 
 module.exports = {
   index,
@@ -21,12 +22,15 @@ async function index(req, res) {
 async function create(req, res) {
   console.log('user: ', req.user)
   try {
-    const job = await Job.create(req.body);
-    res.status(201).json(job);
+    let user = User.findById(req.user)
+    user.jobs.push(req.body)
+    user.save();
+    // const job = await Job.create(req.body);
+    res.status(201).json(user.jobs);
   }
   catch(err){
     res.status(500).json(err);
-  }
+  } 
 }
 
 async function show(req, res) {

@@ -30,6 +30,7 @@ class App extends Component {
 
   async componentDidMount() {
     const jobs = await jobAPI.index();
+    console.log(jobs);
     this.setState({ jobs });
   }
 
@@ -40,23 +41,23 @@ class App extends Component {
     }), () => this.props.history.push('/'));
   }
   
-  handleDeleteJob= async id => {
-    await jobAPI.deleteOne(id);
-    this.setState(state => ({
-      jobs: state.jobs.filter(j => j._id !== id)
-    }), () => this.props.history.push('/'));
-  }
+  // handleDeleteJob= async id => {
+  //   await jobAPI.deleteOne(id);
+  //   this.setState(state => ({
+  //     jobs: state.jobs.filter(j => j._id !== id)
+  //   }), () => this.props.history.push('/'));
+  // }
   
-  handleUpdateJob = async updatedJobData => {
-    const updatedJob = await jobAPI.update(updatedJobData);
-    const newJobsArray = this.state.jobs.map(j => 
-      j._id === updatedJob._id ? updatedJob : j
-    );
-    this.setState(
-      {jobs: newJobsArray},
-      () => this.props.history.push('/')
-    );
-  }
+  // handleUpdateJob = async updatedJobData => {
+  //   const updatedJob = await jobAPI.update(updatedJobData);
+  //   const newJobsArray = this.state.jobs.map(j => 
+  //     j._id === updatedJob._id ? updatedJob : j
+  //   );
+  //   this.setState(
+  //     {jobs: newJobsArray},
+  //     () => this.props.history.push('/')
+  //   );
+  // }
 
   render() {
     return (
@@ -87,9 +88,12 @@ class App extends Component {
               <Redirect to='/login'/>
           }/>
           <Route exact path='/' render={() =>
-            <Job 
-              jobs={this.state.jobs}
+            <Job
             
+            
+              jobs={this.state.jobs}
+
+
             />
           }/>
 

@@ -8,7 +8,8 @@ const jobSchema = new Schema({
   },
   company: {
     type: String
-  }
+  },
+ 
 }, {
   timestamps: true
 });
