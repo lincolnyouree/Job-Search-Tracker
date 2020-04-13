@@ -1,6 +1,6 @@
 import React from 'react';
 import './JobListPage.css';
-import JobCard from '../../components/JobCard/JobCard';
+import JobCard from '../../components/Job/JobCard';
 
 function JobListPage(props) {
   return (
@@ -12,6 +12,7 @@ function JobListPage(props) {
                         key={job._id}
                         job={job}
                         handleDeleteJob={props.handleDeleteJob}
+                        handleUpdateJob={props.handleUpdateJob}
                 />
             )}
         </div>

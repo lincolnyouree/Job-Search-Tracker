@@ -24,3 +24,39 @@ export function create(score) {
   };
   return fetch(BASE_URL, options).then(res => res.json());
 }
+
+export function deleteOne(req, res) {
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    },
+    body: JSON.stringify()
+  };
+  return fetch(BASE_URL, options).then(res => res.json());
+}
+
+export function update(req, res) {
+  const options = {
+    method: 'PUT',
+    headers: {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    },
+    body: JSON.stringify()
+  };
+  return fetch(BASE_URL, options).then(res => res.json());
+}
+
+// export function show(req, res) {
+//   const options {
+//     method: 'GET',
+//     headers: {
+//       'Content-type': 'application/json',
+//       'Authorization': 'Bearer ' + tokenService.getToken()
+//     },
+//   };
+//   return fetch(BASE_URL, options).then(res => res.json());
+// }
+    

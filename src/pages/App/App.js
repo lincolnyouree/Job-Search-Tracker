@@ -88,6 +88,31 @@ class App extends Component {
           <Route exact path='/' render={() =>
             <Job />
           }/>
+
+
+
+
+
+          <Route exact path='../../components/Job/Job' render={() =>
+            <JobCard />
+          }/>
+          <Route exact path='../../pages/JobListPage/JobListPage' render={() =>
+            <JobListPage />
+          }/>
+          <Route exact path='../../pages/AddJobPage/AddJobPage' render={() =>
+            <AddJobPage />
+          }/>
+          <Route exact path='../../pages/EditJobPage/EditJobPage' render={() =>
+            <EditJobPage />
+          }/>
+
+
+
+
+
+
+
+
         </Switch>
       </div>
     );

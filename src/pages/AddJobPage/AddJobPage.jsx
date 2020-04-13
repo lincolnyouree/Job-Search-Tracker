@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './AddJobPage.css';
 
 class AddJobPage extends Component {
   state = {
@@ -33,7 +34,7 @@ class AddJobPage extends Component {
             <input
               className="form-control"
               name="position"
-              value={this.state.formData.name}
+              value={this.state.formData.position}
               onChange={this.handleChange}
               required
             />
