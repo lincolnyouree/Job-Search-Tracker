@@ -65,6 +65,7 @@ class App extends Component {
         <NavBar
           user={this.state.user}
           handleLogout={this.handleLogout}
+          
         />
         <Switch>
           <Route exact path='/login' render={({ history }) => 
@@ -86,7 +87,10 @@ class App extends Component {
               <Redirect to='/login'/>
           }/>
           <Route exact path='/' render={() =>
-            <Job />
+            <Job 
+              jobs={this.state.jobs}
+            
+            />
           }/>
 
 
@@ -99,8 +103,9 @@ class App extends Component {
           <Route exact path='../../pages/JobListPage/JobListPage' render={() =>
             <JobListPage />
           }/>
-          <Route exact path='../../pages/AddJobPage/AddJobPage' render={() =>
-            <AddJobPage />
+          <Route exact path='/addjob' render={() =>
+            <AddJobPage handleAddJob={this.handleAddJob}/>
+          
           }/>
           <Route exact path='../../pages/EditJobPage/EditJobPage' render={() =>
             <EditJobPage />
