@@ -30,7 +30,6 @@ class EditJobPage extends Component {
           <div className="form-group">
             <label>Position:</label>
             <input
-            //   className="form-control"
               name="position"
               value={this.state.formData.name}
               onChange={this.handleChange}

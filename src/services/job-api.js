@@ -17,7 +17,6 @@ export function create(score) {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
-      // Add this header - don't forget the space after Bearer
       'Authorization': 'Bearer ' + tokenService.getToken()
     },
     body: JSON.stringify(score)
@@ -48,15 +47,3 @@ export function update(req, res) {
   };
   return fetch(BASE_URL, options).then(res => res.json());
 }
-
-// export function show(req, res) {
-//   const options {
-//     method: 'GET',
-//     headers: {
-//       'Content-type': 'application/json',
-//       'Authorization': 'Bearer ' + tokenService.getToken()
-//     },
-//   };
-//   return fetch(BASE_URL, options).then(res => res.json());
-// }
-    
