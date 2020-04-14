@@ -1,11 +1,11 @@
 import React from 'react';
+import './Job.css';
 
 
 const Job = (props) => (
-  <div>
+  <div className="form-control">
 
-      <h3>This is the Job Component.</h3>
-      <p>It is located at src/components/Job/Job.jsx</p>
+      <h2>Job List:</h2>      
     {props.jobs.length ? 
       props.jobs.map((job, idx) =>
         <li>{job.position}</li>

@@ -3,15 +3,31 @@ const bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;
 
-const JobSchema = new mongoose.Schema({
+const jobSchema = new mongoose.Schema({
   position: {
     type: String,
     required: true
   },
   company: {
+    type: String,
+    required: true
+  },
+  location: {
+    type: String,
+    required: true
+  },
+  contact: {
     type: String
   },
- 
+  dateApplied: {
+    type: String
+  },
+  status: {
+    type: String
+  },
+  notes: {
+    type: String
+  },
 }, {
   timestamps: true
 });
@@ -20,8 +36,7 @@ const userSchema = new mongoose.Schema({
   name: String,
   email: {type: String, required: true, lowercase: true, unique: true},
   password: String,
-  jobs: [JobSchema]
-  
+  jobs: [jobSchema]
 }, {
   timestamps: true
 });

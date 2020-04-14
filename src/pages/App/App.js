@@ -20,25 +20,33 @@ class App extends Component {
   };
 
   handleLogout = () => {
+    console.log("handleLogout");
     userAPI.logout();
-    this.setState({ user: null });
+    this.setState({ user: null, jobs : [] });
   }
 
   handleSignupOrLogin = () => {
     this.setState({user: userAPI.getUser()});
+    this.componentDidMount();
+    
   }
 
   async componentDidMount() {
-    const jobs = await jobAPI.index();
-    console.log(jobs);
-    this.setState({ jobs });
+    console.log("HOEW")
+    if (this.state.user) {
+      const allJobs = await jobAPI.index();
+      // let jobs = this.state.user.jobs
+      console.log(allJobs);
+      this.setState({ jobs : allJobs });
+
+    }
   }
 
   handleAddJob = async newJobData => {
     const newJob = await jobAPI.create(newJobData);
-    this.setState(state => ({
-      jobs: [...state.jobs, newJob]
-    }), () => this.props.history.push('/'));
+    this.setState( {
+      jobs: [...this.state.jobs, newJobData]
+    }, () => this.props.history.push('/'));
   }
   
   // handleDeleteJob= async id => {
@@ -62,11 +70,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome to Job</h1>
+        <h1>Job Search Tracker</h1>
         <NavBar
           user={this.state.user}
           handleLogout={this.handleLogout}
-          
         />
         <Switch>
           <Route exact path='/login' render={({ history }) => 
@@ -89,11 +96,11 @@ class App extends Component {
           }/>
           <Route exact path='/' render={() =>
             <Job
-            
-            
               jobs={this.state.jobs}
-
-
+            />
+          }/>
+          <Route exact path='/addjob' render={() =>
+            <AddJobPage handleAddJob={this.handleAddJob}
             />
           }/>
 
@@ -106,10 +113,6 @@ class App extends Component {
           }/>
           <Route exact path='../../pages/JobListPage/JobListPage' render={() =>
             <JobListPage />
-          }/>
-          <Route exact path='/addjob' render={() =>
-            <AddJobPage handleAddJob={this.handleAddJob}/>
-          
           }/>
           <Route exact path='../../pages/EditJobPage/EditJobPage' render={() =>
             <EditJobPage />

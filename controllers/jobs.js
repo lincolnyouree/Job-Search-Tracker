@@ -1,5 +1,5 @@
-var Job = require('../models/job');
-var User = require('../models/user');
+const Job = require('../models/job');
+const User = require('../models/user');
 
 module.exports = {
   index,
@@ -10,9 +10,15 @@ module.exports = {
 };
 
 async function index(req, res) {
+  
   try{
-      const jobs = await Job.find({});
-      res.status(200).json(jobs);
+    await User.findById(req.user._id, function(err, user) {
+      // user.save(function(err) {
+      console.log(user.jobs, "JOBS");
+      res.status(201).json(user.jobs);
+
+      // });
+  });
   }
   catch(err){
       res.status(500).json(err);
@@ -20,18 +26,32 @@ async function index(req, res) {
 }
 
 async function create(req, res) {
-  console.log('user: ', req.user)
-  try {
-    let user = User.findById(req.user)
-    user.jobs.push(req.body)
-    user.save();
-    // const job = await Job.create(req.body);
-    res.status(201).json(user.jobs);
-  }
-  catch(err){
-    res.status(500).json(err);
-  } 
+  const create = await User.findById(req.user._id, function(err, user) {
+      console.log(req.body)
+      user.jobs.push(req.body);
+      user.save(function(err) {
+      res.status(201).json(create);
+      });
+  });
 }
+
+// async function create(req, res) {
+//   console.log('user: ', req.user)
+//   console.log(req.body);
+//   try {
+//     let user = User.findById(req.user._id)
+//     console.log(user._id)
+//     user.jobs.push(req.body)
+//     user.save(function(err) {
+//       res.status(201).json(user.jobs);
+//     });
+//     // const job = await Job.create(req.body);
+//   }
+//   catch(err){
+//     console.log(err);
+//     res.status(500).json(err);
+//   } 
+// }
 
 async function show(req, res) {
   console.log('user: ', req.user)
