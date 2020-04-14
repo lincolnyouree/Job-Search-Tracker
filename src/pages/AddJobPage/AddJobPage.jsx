@@ -51,5 +51,4 @@ class AddJobPage extends Component {
     );
   }
 }
-
 export default AddJobPage;

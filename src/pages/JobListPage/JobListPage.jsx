@@ -19,5 +19,4 @@ function JobListPage(props) {
     </>
   );
 }
-
 export default JobListPage;
