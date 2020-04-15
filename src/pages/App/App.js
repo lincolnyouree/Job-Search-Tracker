@@ -49,13 +49,9 @@ class App extends Component {
     const deletedJob = await jobAPI.deleteOne(id);
     let newJobs = this.state.jobs;
     newJobs.splice(id, 1)
-    console.log(newJobs);
     this.setState(state => ({ 
-      // jobs: state.jobs.filter(j => j._id !== id)
-      // jobs: state.jobs.splice(id, 1)
       jobs: newJobs
     }))
-    console.log(id);
   }
 
   handleUpdateJob = async updatedJobData => {
@@ -72,7 +68,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      {/* <img src={logo} alt="logo"/> */}
         <h1>Job Search Tracker</h1>
         <NavBar
           user={this.state.user}
@@ -104,20 +99,22 @@ class App extends Component {
             />
           }/>
           <Route exact path='/addjob' render={() =>
-            <AddJobPage handleAddJob={this.handleAddJob}
+            <AddJobPage 
+              handleAddJob={this.handleAddJob}
             />
           }/>
           <Route exact path='/jobcard' render={() =>
             <JobCard 
               jobs={this.state.jobs}
-              // handleDeleteJob={this.handleDeleteJob}
             />
           }/>
           <Route exact path='/joblist' render={() =>
             <JobListPage />
           }/>
           <Route exact path='/editjob' render={() =>
-            <EditJobPage />
+            <EditJobPage 
+              handleUpdateJob={this.handleUpdateJob}
+            />
           }/>
         </Switch>
       </div>

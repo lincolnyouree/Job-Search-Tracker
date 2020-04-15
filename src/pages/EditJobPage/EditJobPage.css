@@ -1,0 +1,36 @@
+.editForm {
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    height: 85vh;
+    border-width: .5vh;
+    border-color: black;
+    border-style: solid;
+    padding: 10vh;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    height: 1vh;
+    width: 30vh;
+    padding: 1.5vh;
+}
+
+.notes {
+    display: flex;
+    flex-direction: column;  
+    margin: 1vh;
+    height: 7vh;
+    width: 50vh;
+    padding: 1.5vh;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    height: 10vh;
+    width: 20vh;
+}

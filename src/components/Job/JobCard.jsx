@@ -1,5 +1,34 @@
-// import React from 'react';
-// import {Link} from 'react-router-dom';
+import React from 'react';
+import './Job.css';
+import {Link} from 'react-router-dom';
+
+
+const Job = (props) => (
+  <div className="form-control">
+
+      <h2>Details</h2>      
+    {props.jobs.length ? 
+      props.jobs.map((job, idx) =>
+        <li key={job._id}>
+            {job.position}
+            {job.company}
+            {job.location}
+            {job.contact}
+            {job.dateApplied}
+            {job.status}
+            {job.notes}
+          <Link className='btn' to={{pathname: '/editjob'}}>Update</Link>
+        </li>
+      )
+      : <div></div>
+    }
+  </div>
+)
+
+ 
+export default Job;
+
+
 
 // function JobCard({job, handleDeleteJob}) {
 //     return (
@@ -21,29 +50,3 @@
 //         </div>
 //     )
 // }
-
-// export default JobCard;
-
-import React from 'react';
-import './Job.css';
-import {Link} from 'react-router-dom';
-
-
-const Job = (props) => (
-  <div className="form-control">
-
-      <h2>Job List:</h2>      
-    {props.jobs.length ? 
-      props.jobs.map((job, idx) =>
-        <li key={job._id}>{job.position} at {job.company}
-          <button className='btn' onClick={() => props.handleDeleteJob(job._id)}>DELETE</button>
-          <Link className='btn' to={{pathname: '/jobcard'}}>Job Details</Link>
-        </li>
-      )
-      : <div></div>
-    }
-  </div>
-)
-
- 
-export default Job;
