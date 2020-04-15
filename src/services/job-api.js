@@ -25,15 +25,16 @@ export function create(score) {
   return fetch(BASE_URL, options).then(res => res.json());
 }
 
-export function deleteOne(id) {
+export function deleteOne(_id) {
   const options = {
     method: 'DELETE',
     headers: {
+
       'Content-type': 'application/json',
       'Authorization': 'Bearer ' + tokenService.getToken()
-    }
+    },
   };
-  return fetch(`${BASE_URL}/${id}`, options).then(res => res.json());
+  return fetch(`${BASE_URL}/${_id}`, options).then(res => res.json());
 }
 
 export function update(req, res) {

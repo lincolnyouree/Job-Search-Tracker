@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import logo from './logo.png';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -48,11 +47,17 @@ class App extends Component {
 
   handleDeleteJob = async id => {
     const deletedJob = await jobAPI.deleteOne(id);
-    this.setState(state => ({
-      jobs: state.jobs.filter(j => j._id !== id)
+    let newJobs = this.state.jobs;
+    newJobs.splice(id, 1)
+    console.log(newJobs);
+    this.setState(state => ({ 
+      // jobs: state.jobs.filter(j => j._id !== id)
+      // jobs: state.jobs.splice(id, 1)
+      jobs: newJobs
     }))
+    console.log(id);
   }
-  
+
   handleUpdateJob = async updatedJobData => {
     const updatedJob = await jobAPI.update(updatedJobData);
     const newJobsArray = this.state.jobs.map(j => 
@@ -103,7 +108,10 @@ class App extends Component {
             />
           }/>
           <Route exact path='/jobcard' render={() =>
-            <JobCard />
+            <JobCard 
+              jobs={this.state.jobs}
+              // handleDeleteJob={this.handleDeleteJob}
+            />
           }/>
           <Route exact path='/joblist' render={() =>
             <JobListPage />

@@ -31,14 +31,49 @@ class EditJobPage extends Component {
             <label>Position:</label>
             <input
               name="position"
-              value={this.state.formData.name}
+              value={this.state.formData.position}
               onChange={this.handleChange}
-              required
+            />
+            <label>Company:</label>
+            <input
+              name="company"
+              value={this.state.formData.company}
+              onChange={this.handleChange}
+            />
+            <label>Location:</label>
+            <input
+              name="location"
+              value={this.state.formData.location}
+              onChange={this.handleChange}
+            />
+            <label>Contact:</label>
+            <input
+              name="contact"
+              value={this.state.formData.contact}
+              onChange={this.handleChange}
+            />
+            <label>Date Applied:</label>
+            <input
+              name="dateApplied"
+              value={this.state.formData.dateApplied}
+              onChange={this.handleChange}
+            />
+            <label>Status:</label>
+            <input
+              name="status"
+              value={this.state.formData.status}
+              onChange={this.handleChange}
+            />
+            <label>Notes:</label>
+            <input
+              name="notes"
+              value={this.state.formData.notes}
+              onChange={this.handleChange}
             />
           </div>
           <button
             type="submit"
-            className="btn btn-xs"
+            className="btn"
             disabled={this.state.invalidForm}
           >
             SAVE JOB

@@ -31,8 +31,13 @@ async function create(req, res) {
 }
 
 async function deleteOne(req, res) {
+  console.log("DELETE");
+
   const deletedJob = await User.findById(req.user._id, function(err, user) {
-  user.jobs.remove(req.body.id);
+  // user.jobs.remove(req.body.id);
+  // user.jobs.splice(req.body.id);
+  user.jobs.splice(req.params.id, 1);
+  console.log(user.jobs);
   user.save(function(err) {
   res.status(201).json(deletedJob);
   });
