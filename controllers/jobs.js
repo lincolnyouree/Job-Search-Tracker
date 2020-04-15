@@ -14,7 +14,7 @@ async function index(req, res) {
   try{
     await User.findById(req.user._id, function(err, user) {
       // user.save(function(err) {
-      console.log(user.jobs, "JOBS");
+      // console.log(user.jobs, "JOBS");
       res.status(201).json(user.jobs);
 
       // });
@@ -35,23 +35,15 @@ async function create(req, res) {
   });
 }
 
-// async function create(req, res) {
-//   console.log('user: ', req.user)
-//   console.log(req.body);
-//   try {
-//     let user = User.findById(req.user._id)
-//     console.log(user._id)
-//     user.jobs.push(req.body)
-//     user.save(function(err) {
-//       res.status(201).json(user.jobs);
-//     });
-//     // const job = await Job.create(req.body);
-//   }
-//   catch(err){
-//     console.log(err);
-//     res.status(500).json(err);
-//   } 
-// }
+async function deleteOne(req, res) {
+  console.log("DELETEONE");
+  const deletedJob = await User.findById(req.user._id, function(err, user) {
+  console.log(req.body, "REQBODY")
+  user.jobs.remove(req.body.id);
+  user.save(function(err) {
+  res.status(201).json(deletedJob);
+  });
+})};
 
 async function show(req, res) {
   console.log('user: ', req.user)
@@ -75,13 +67,14 @@ async function update(req, res) {
   }
 }
 
-async function deleteOne(req, res) {
-  console.log('user: ', req.user)
-  try {
-    const deletedJob = await Job.findByIdAndRemove(req.params.id);
-    res.status(200).json(deletedJob);
-  }
-  catch(err){
-    res.status(500).json(err);
-  }
-}
+// async function deleteOne(req, res) {
+//   console.log('user: ', req.user)
+//   try {
+//     const deletedJob = await Job.findByIdAndRemove(req.params.id);
+//     res.status(200).json(deletedJob);
+//   }
+//   catch(err){
+//     res.status(500).json(err);
+//   }
+// }
+

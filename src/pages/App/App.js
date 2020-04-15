@@ -49,11 +49,20 @@ class App extends Component {
     }, () => this.props.history.push('/'));
   }
   
-  handleDeleteJob= async id => {
-    await jobAPI.deleteOne(id);
+  // handleDeleteJob= async id => {
+  //   await jobAPI.deleteOne(id);
+  //   this.setState(state => ({
+  //     jobs: state.jobs.filter(j => j._id !== id)
+  //   }), () => this.props.history.push('/'));
+  // }
+
+  handleDeleteJob = async id => {
+    const deletedJob = await jobAPI.deleteOne(id);
+    console.log(id);
+    console.log(this.state.jobs[0]);
     this.setState(state => ({
       jobs: state.jobs.filter(j => j._id !== id)
-    }), () => this.props.history.push('/'));
+    }))
   }
   
   handleUpdateJob = async updatedJobData => {
@@ -97,6 +106,7 @@ class App extends Component {
           <Route exact path='/' render={() =>
             <Job
               jobs={this.state.jobs}
+              handleDeleteJob={this.handleDeleteJob}
             />
           }/>
           <Route exact path='/addjob' render={() =>
