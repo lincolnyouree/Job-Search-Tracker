@@ -1,6 +1,6 @@
 ![Wireframe](https://i.imgur.com/sqI0Pie.png)
 
-A full-stack MERN application for organizing and tracking an individual's job search process.
+A full-stack MERN application for organizing and tracking the job search process.
   
 * Click [here]() to view the app.
 
