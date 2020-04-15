@@ -1,5 +1,4 @@
-# __The Search__
-_________________________________
+![Wireframe](https://i.imgur.com/sqI0Pie.png)
 
 A full-stack MERN application for organizing and tracking an individual's job search process.
   
