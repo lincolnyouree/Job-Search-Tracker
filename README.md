@@ -2,7 +2,7 @@
 
 A full-stack MERN application for organizing and tracking the job search process.
   
-* Click [here]() to view the app.
+* Click [here](https://the-search-app.herokuapp.com/) to view the app.
 
 * Click [here](https://trello.com/b/o0FYqJuq/job-search-tracker-react) to view the Trello board.
 _________________________________
