@@ -6,6 +6,7 @@ function Job({job, handleDeleteJob}) {
         <div className='panel panel-default'>
             <div className="panel-heading">
                 <h3 className='panel-title'>{job.position}</h3>
+                <h3 className='panel-title'>{job.company}</h3>
             </div>
             <div className='panel-footer'>
             <Link

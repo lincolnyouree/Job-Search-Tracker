@@ -8,11 +8,10 @@ const Job = (props) => (
       <h2>Job List:</h2>      
     {props.jobs.length ? 
       props.jobs.map((job, idx) =>
-        <li>{job.position}</li>
+        <li>{job.position} at {job.company}</li>
       )
         : <div></div>
     }
-
   </div>
 )
  

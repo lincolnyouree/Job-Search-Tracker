@@ -49,23 +49,23 @@ class App extends Component {
     }, () => this.props.history.push('/'));
   }
   
-  // handleDeleteJob= async id => {
-  //   await jobAPI.deleteOne(id);
-  //   this.setState(state => ({
-  //     jobs: state.jobs.filter(j => j._id !== id)
-  //   }), () => this.props.history.push('/'));
-  // }
+  handleDeleteJob= async id => {
+    await jobAPI.deleteOne(id);
+    this.setState(state => ({
+      jobs: state.jobs.filter(j => j._id !== id)
+    }), () => this.props.history.push('/'));
+  }
   
-  // handleUpdateJob = async updatedJobData => {
-  //   const updatedJob = await jobAPI.update(updatedJobData);
-  //   const newJobsArray = this.state.jobs.map(j => 
-  //     j._id === updatedJob._id ? updatedJob : j
-  //   );
-  //   this.setState(
-  //     {jobs: newJobsArray},
-  //     () => this.props.history.push('/')
-  //   );
-  // }
+  handleUpdateJob = async updatedJobData => {
+    const updatedJob = await jobAPI.update(updatedJobData);
+    const newJobsArray = this.state.jobs.map(j => 
+      j._id === updatedJob._id ? updatedJob : j
+    );
+    this.setState(
+      {jobs: newJobsArray},
+      () => this.props.history.push('/')
+    );
+  }
 
   render() {
     return (
@@ -114,7 +114,7 @@ class App extends Component {
           <Route exact path='../../pages/JobListPage/JobListPage' render={() =>
             <JobListPage />
           }/>
-          <Route exact path='../../pages/EditJobPage/EditJobPage' render={() =>
+          <Route exact path='/editjob' render={() =>
             <EditJobPage />
           }/>
 
