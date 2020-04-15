@@ -25,7 +25,6 @@ const Job = (props) => (
   </div>
 )
 
- 
 export default Job;
 
 

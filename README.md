@@ -14,7 +14,7 @@ _________________________________
 
 ### _Entity Relationship Diagram_:
 
-![Wireframe](https://i.imgur.com/MJONbEE.png)
+![Wireframe](https://i.imgur.com/5OkSrfI.png)
 _________________________________
 
 ### _Wireframe_:

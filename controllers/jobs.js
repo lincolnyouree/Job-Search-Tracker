@@ -13,7 +13,6 @@ async function index(req, res) {
   try{
     await User.findById(req.user._id, function(err, user) {
       res.status(201).json(user.jobs);
-
   });
   }
   catch(err){
@@ -31,32 +30,37 @@ async function create(req, res) {
 }
 
 async function deleteOne(req, res) {
-  console.log("DELETE");
-
   const deletedJob = await User.findById(req.user._id, function(err, user) {
-  // user.jobs.remove(req.body.id);
-  // user.jobs.splice(req.body.id);
   user.jobs.splice(req.params.id, 1);
-  console.log(user.jobs);
   user.save(function(err) {
   res.status(201).json(deletedJob);
   });
 })};
 
+async function update(req, res) {
+  const updatedJob = await User.findById(req.user._id, function(err, user) {
+  user.jobs.push(req.params.id, 1);
+  user.save(function(err) {
+  res.status(201).json(updatedJob);
+  });
+})};
+    
+  
+
+// async function update(req, res) {
+//   try {
+//     const updatedJob = await Job.findByIdAndUpdate(req.params.id, req.body, {new: true});
+//     res.status(200).json(updatedJob);
+//   }
+//   catch(err){
+//     res.status(500).json(err);
+//   }
+// }
+
 async function show(req, res) {
   try {
     const job = await Job.findById(req.params.id);
     res.status(200).json(job);
-  }
-  catch(err){
-    res.status(500).json(err);
-  }
-}
-
-async function update(req, res) {
-  try {
-    const updatedJob = await Job.findByIdAndUpdate(req.params.id, req.body, {new: true});
-    res.status(200).json(updatedJob);
   }
   catch(err){
     res.status(500).json(err);

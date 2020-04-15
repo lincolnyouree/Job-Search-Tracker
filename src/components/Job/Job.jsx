@@ -11,7 +11,6 @@ const Job = (props) => (
       props.jobs.map((job, idx) =>
         <li key={job._id}>{job.position} at {job.company}
           <button className='btn' onClick={() => props.handleDeleteJob(idx)}>DELETE</button>
-          {/* <button className='btn' onClick={() => props.handleDeleteJob(job._id)}>DELETE</button> */}
           <Link className='btn' to={{pathname: '/jobcard'}}>Job Details</Link>
         </li>
       )
