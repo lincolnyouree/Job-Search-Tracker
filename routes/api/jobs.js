@@ -12,7 +12,6 @@ router.put('/:id', checkAuth, jobsCtrl.update);
 router.delete('/:id', checkAuth, jobsCtrl.delete);
 
 function checkAuth(req, res, next) {
-  console.log(req, "HELLO");
   if (req.user) return next();
   return res.status(401).json({msg: req.user});
 }

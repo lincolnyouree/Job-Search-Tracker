@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+// import logo from './logo.png';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -20,7 +21,6 @@ class App extends Component {
   };
 
   handleLogout = () => {
-    console.log("handleLogout");
     userAPI.logout();
     this.setState({ user: null, jobs : [] });
   }
@@ -32,11 +32,8 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    console.log("HOEW")
     if (this.state.user) {
       const allJobs = await jobAPI.index();
-      // let jobs = this.state.user.jobs
-      console.log(allJobs);
       this.setState({ jobs : allJobs });
 
     }
@@ -48,18 +45,9 @@ class App extends Component {
       jobs: [...this.state.jobs, newJobData]
     }, () => this.props.history.push('/'));
   }
-  
-  // handleDeleteJob= async id => {
-  //   await jobAPI.deleteOne(id);
-  //   this.setState(state => ({
-  //     jobs: state.jobs.filter(j => j._id !== id)
-  //   }), () => this.props.history.push('/'));
-  // }
 
   handleDeleteJob = async id => {
     const deletedJob = await jobAPI.deleteOne(id);
-    console.log(id);
-    console.log(this.state.jobs[0]);
     this.setState(state => ({
       jobs: state.jobs.filter(j => j._id !== id)
     }))
@@ -79,6 +67,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      {/* <img src={logo} alt="logo"/> */}
         <h1>Job Search Tracker</h1>
         <NavBar
           user={this.state.user}
@@ -113,28 +102,15 @@ class App extends Component {
             <AddJobPage handleAddJob={this.handleAddJob}
             />
           }/>
-
-
-
-
-
-          <Route exact path='../../components/Job/Job' render={() =>
+          <Route exact path='/jobcard' render={() =>
             <JobCard />
           }/>
-          <Route exact path='../../pages/JobListPage/JobListPage' render={() =>
+          <Route exact path='/joblist' render={() =>
             <JobListPage />
           }/>
           <Route exact path='/editjob' render={() =>
             <EditJobPage />
           }/>
-
-
-
-
-
-
-
-
         </Switch>
       </div>
     );

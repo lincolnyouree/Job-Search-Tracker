@@ -15,14 +15,12 @@ export function index() {
 export function create(score) {
   console.log(tokenService.getToken());
   const options = {
-    
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
       'Authorization': 'Bearer ' + tokenService.getToken()
     },
     body: JSON.stringify(score)
-  
   };
   return fetch(BASE_URL, options).then(res => res.json());
 }
@@ -34,13 +32,8 @@ export function deleteOne(id) {
       'Content-type': 'application/json',
       'Authorization': 'Bearer ' + tokenService.getToken()
     }
-    // body: JSON.stringify()
-    // body: {id : id}
-
   };
   return fetch(`${BASE_URL}/${id}`, options).then(res => res.json());
-  // return fetch(BASE_URL, options).then(res => res.json());
-
 }
 
 export function update(req, res) {

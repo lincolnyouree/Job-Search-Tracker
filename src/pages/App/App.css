@@ -9,4 +9,16 @@
 
 h1 {
   font-family: 'Roboto', sans-serif;
+  background-image: url(https://i.imgur.com/sqI0Pie.png);
+}
+
+.btn {
+  background-color: red;
+  color: white;
+  height: 10vh;
+  width: 20vh;
+}
+
+.logo {
+  background-image: url(https://i.imgur.com/sqI0Pie.png);
 }
