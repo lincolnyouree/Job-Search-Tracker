@@ -1,39 +1,34 @@
-# __Job Search Tracker__
-
-* Click [here]() to view the app! 
+# __The Search__
 _________________________________
 
-## _Description_:
-
-* Full-stack CRUD app in React.js using JSON Web Token Authorization, MongoDB, and Heroku deploy.
-_________________________________
-
-## _Trello_:
+A full-stack MERN application for organizing and tracking an individual's job search process.
+  
+* Click [here]() to view the app.
 
 * Click [here](https://trello.com/b/o0FYqJuq/job-search-tracker-react) to view the Trello board.
 _________________________________
 
-## _Motivation_:
+### _Motivation_:
 
 * As I transition into a new career field, I want to develop an efficient way to organize jobs of interest, applications submitted, and various notes about the interview process... 
 _________________________________
 
-## _ERD_:
+### _Entity Relationship Diagram_:
 
 ![Wireframe](https://i.imgur.com/MJONbEE.png)
 _________________________________
 
-## _Wireframe_:
+### _Wireframe_:
 
 ![Wireframe](https://i.imgur.com/RsxHbGF.png)
 _________________________________
 
-## _Finished App_:
+### _Finished App_:
 
 ![Wireframe]()
 _________________________________
 
-## _Minimum Viable Product_:
+### _User Experience_:
 
 * As a User, I should be able to create a profile.
 * As a User, I should be able to login to my profile.
@@ -44,30 +39,22 @@ _________________________________
 * As a User, I should be able to logout of my profile.
 _________________________________
 
-## _Pseudocode_: 
+### _Future Updates_:
 
-* Click Button to Create Account
-* Click Button to Login to Account
-* Click Button to Add Job to List
-* Click Button to Update Job on List
-* Click Button to Delete Job from List
-* Click Button to Logout of Account
+* Ability to add and Delete Photos.
+* Consume data from a third-party API.
+* Mobile responsiveness.
 _________________________________
 
-## _Stretch Goals_:
-
-* Add and Delete Photos
-* Job Search API
-* Mobile Responsiveness
-_________________________________
-
-## _Technology Implemented_:
+### _Technology Implemented_:
 
 * React
-* Node.js
-* Heroku
-* GitHub
-* MongoDB
+* Node/Express
+* HTML
+* CSS
+* MongoDB/Mongoose
 * JSON Web Token Authorization
 * Chajr
+* Heroku
+* GitHub
 _________________________________
