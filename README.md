@@ -19,7 +19,7 @@ _________________________________
 
 ### _Wireframe_:
 
-![Wireframe](https://i.imgur.com/RsxHbGF.png)
+![Wireframe](https://i.imgur.com/6pYUFxE.png)
 _________________________________
 
 ### _Finished App_:
