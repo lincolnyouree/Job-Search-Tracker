@@ -12,10 +12,11 @@ _________________________________
 As I transition into a new career field, I want to develop an efficient way to organize jobs of interest, applications submitted, and various notes about the interview process... 
 _________________________________
 
-### _Entity Relationship Diagram, Wireframe, and Finished Screenshots_:
-
+Entity Relationship Diagram:
 ![Wireframe](https://i.imgur.com/5OkSrfI.png)
+Wireframe:
 ![Wireframe](https://i.imgur.com/6pYUFxE.png)
+Finished Screenshots:
 ![Wireframe]()
 _________________________________
 
