@@ -38,15 +38,15 @@ async function deleteOne(req, res) {
 })};
 
 async function update(req, res) {
-  const updatedJob = await User.findById(req.user._id, function(err, user) {
-  user.jobs.push(req.params.id, 1);
+  const user = await User.findById(req.user._id)
+  let updatedJob = user.jobs.splice(req.params.idx, 1, req.body);
   user.save(function(err) {
-  res.status(201).json(updatedJob);
+  res.status(201).json(user.jobs[req.params.idx]);
   });
-})};
+};
     
   
-
+// 
 // async function update(req, res) {
 //   try {
 //     const updatedJob = await Job.findByIdAndUpdate(req.params.id, req.body, {new: true});

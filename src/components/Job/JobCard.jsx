@@ -1,31 +1,31 @@
-import React from 'react';
-import './Job.css';
-import {Link} from 'react-router-dom';
+// import React from 'react';
+// import './Job.css';
+// import {Link} from 'react-router-dom';
 
 
-const Job = (props) => (
-  <div className="form-control">
+// const Job = (props) => (
+//   <div className="form-control">
 
-      <h2>Details</h2>      
-    {props.jobs.length ? 
-      props.jobs.map((job, idx) =>
-        <li key={job._id}>
-            {job.position}
-            {job.company}
-            {job.location}
-            {job.contact}
-            {job.dateApplied}
-            {job.status}
-            {job.notes}
-          <Link className='btn' to={{pathname: '/editjob'}}>Update</Link>
-        </li>
-      )
-      : <div></div>
-    }
-  </div>
-)
+//       <h2>Details</h2>      
+//     {props.jobs.length ? 
+//       props.jobs.map((job, idx) =>
+//         <li key={job._id}>
+//             {job.position}
+//             {job.company}
+//             {job.location}
+//             {job.contact}
+//             {job.dateApplied}
+//             {job.status}
+//             {job.notes}
+//           <Link className='btn' to={{pathname: '/editjob'}}>Update</Link>
+//         </li>
+//       )
+//       : <div></div>
+//     }
+//   </div>
+// )
 
-export default Job;
+// export default Job;
 
 
 

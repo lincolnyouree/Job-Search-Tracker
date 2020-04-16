@@ -54,10 +54,10 @@ class App extends Component {
     }))
   }
 
-  handleUpdateJob = async updatedJobData => {
-    const updatedJob = await jobAPI.update(updatedJobData);
+  handleUpdateJob = async (updatedJobData, idx, id) => {
+    const updatedJob = await jobAPI.update(updatedJobData, idx);
     const newJobsArray = this.state.jobs.map(j => 
-      j._id === updatedJob._id ? updatedJob : j
+      j._id === id ? updatedJob : j
     );
     this.setState(
       {jobs: newJobsArray},
@@ -91,10 +91,13 @@ class App extends Component {
             :
               <Redirect to='/login'/>
           }/>
-          <Route exact path='/' render={() =>
+          <Route exact path='/' render={({history, location}) =>
             <Job
               jobs={this.state.jobs}
+              user={this.state.user}
               handleDeleteJob={this.handleDeleteJob}
+              history={history}
+              location={location}
             />
           }/>
           <Route exact path='/addjob' render={() =>
@@ -110,9 +113,11 @@ class App extends Component {
           <Route exact path='/joblist' render={() =>
             <JobListPage />
           }/>
-          <Route exact path='/editjob' render={() =>
+          <Route exact path='/editjob' render={({history, location}) =>
             <EditJobPage 
               handleUpdateJob={this.handleUpdateJob}
+              location={location}
+              history={history}
             />
           }/>
         </Switch>
