@@ -9,6 +9,7 @@ const Job = (props) => (
       <div className="listCards">
     {props.jobs.length ? 
       props.jobs.map((job, idx) =>
+      <div className="jobCard">
       <li key={job._id}>
     <dl>
     <dt>Position:</dt>
@@ -31,12 +32,13 @@ const Job = (props) => (
           </Link>
             <button className='deleteBtn' onClick={() => props.handleDeleteJob(idx)}>X</button>
         </li>
+    </div>
       )
       : <div></div>
     }
     </div>
   </div>
-)
+  )
 
  
 export default Job;

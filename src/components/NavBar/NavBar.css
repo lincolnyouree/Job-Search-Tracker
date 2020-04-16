@@ -19,6 +19,6 @@
     justify-content: left;
     align-self: left;
     justify-items: left;
-    /* width: 50vh;
-    width: 50vh; */
+    height: 80vmin;
+    width: 200vmin;
 }
