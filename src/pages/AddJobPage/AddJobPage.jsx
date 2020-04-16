@@ -85,7 +85,7 @@ class AddJobPage extends Component {
           </div>
           <button
             type="submit"
-            className="btn"
+            className="addBtn"
             disabled={this.state.invalidForm}
           >
             ADD JOB

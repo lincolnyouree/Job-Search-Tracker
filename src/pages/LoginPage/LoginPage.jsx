@@ -30,6 +30,8 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="LoginPage">
+      <div className="logo"><img src="'../../logo.png" alt="" className="logo"/> </div>
+
         <header>Log In</header>
         <form onSubmit={this.handleSubmit} >
           <div>

@@ -6,9 +6,19 @@
 
 .NavBar-link {
   margin: 0 10px;
-  color: red;
+  color: rgb(32, 55, 69);
   font-family: 'Roboto', sans-serif;}
 
 .NavBar-welcome {
-  color: grey;
+  color: rgb(159, 169, 175);
   font-family: 'Roboto', sans-serif;}
+
+.logo {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    align-self: left;
+    justify-items: left;
+    /* width: 50vh;
+    width: 50vh; */
+}

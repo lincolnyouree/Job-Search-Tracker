@@ -14,6 +14,7 @@ class SignupPage extends Component {
   render() {
     return (
       <div className='SignupPage'>
+        <div className="logo"><img src="'../../logo.png" alt="" className="logo"/> </div>
         <SignupForm {...this.props} updateMessage={this.updateMessage} />
         <p>{this.state.message}</p>
       </div>

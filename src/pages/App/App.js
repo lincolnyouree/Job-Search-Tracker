@@ -68,7 +68,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Job Search Tracker</h1>
         <NavBar
           user={this.state.user}
           handleLogout={this.handleLogout}
@@ -86,7 +85,7 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-          <Route exact path='/job-secret' render={() => 
+          <Route exact path='/about' render={() => 
             userAPI.getUser() ? 
               <JobsSecretPage />
             :
