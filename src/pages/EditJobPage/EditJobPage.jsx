@@ -31,7 +31,7 @@ class EditJobPage extends Component {
         <div className="editFormOuterBorder">
         <div className="editFormBorder">
         <form className="editForm" ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-        <header className="editHeader">Edit</header><br></br>
+        <header className="editHeader">Details</header><br></br>
           <div className="form-group">
             <label>Position:</label>
             <input

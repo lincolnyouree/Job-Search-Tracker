@@ -84,3 +84,9 @@
     width: 34vmin;
     padding: .5vmin;
 }
+
+.logolist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

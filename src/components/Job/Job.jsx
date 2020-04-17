@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Job = (props) => (
   <div className="form-control-list">
-  <div><img src="'../../logo.png" alt="" className="logolist"/></div>
+  <div className="logolist"><img src="'../../logo.png" alt=""/></div>
       <div className="listCards">
     {props.jobs.length ? 
       props.jobs.map((job, idx) =>

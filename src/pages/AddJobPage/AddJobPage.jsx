@@ -31,7 +31,7 @@ class AddJobPage extends Component {
         <div className="addFormOuterBorder">
         <div className="addFormBorder">
         <form className="addForm"ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-        <header className="addHeader">Add</header><br></br>
+        <header className="addHeader">Add Job</header><br></br>
           <div className="form-group">
             <label>Position: </label>
             <input
