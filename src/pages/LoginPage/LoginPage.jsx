@@ -30,34 +30,41 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="LoginPage">
-      <div className="logo"><img src="'../../logo.png" alt="" className="logo"/> </div>
-
-        <header>Log In</header>
+      <div className="loginlogo"><img src="../../logo.png" alt=""/> </div>
+      <div className="loginFormOuterBorder">
+      <div className="loginFormBorder">
+      <div className="loginForm">
+        <header className="loginHeader">Log In</header><br></br>
         <form onSubmit={this.handleSubmit} >
           <div>
             <input 
+              className="form-control-login"
               type="email" 
               placeholder="Email"
               value={this.state.email} 
               name="email" 
               onChange={this.handleChange} 
             />
-          </div>
+          </div><br></br>
           <div>
             <input 
+              className="form-control-login"
               type="password"
               placeholder="Password" 
               value={this.state.pw} 
               name="pw" 
               onChange={this.handleChange} 
             />
-          </div>
+          </div><br></br>
           <div>
-            <button>Log In</button>
-            &nbsp;&nbsp;&nbsp;
-            <Link to='/'>Cancel</Link>
+            <button className="loginBtn">Log In</button>
+            &nbsp;&nbsp;&nbsp;<br></br><br></br>
+            <Link to='/' className="cancelBtn">Cancel</Link>
           </div>
         </form>
+      </div>
+      </div>
+      </div>
       </div>
     );
   }
