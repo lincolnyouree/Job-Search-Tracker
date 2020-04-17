@@ -21,7 +21,7 @@ _________________________________
 ![Wireframe](https://i.imgur.com/6pYUFxE.png)
 
 ### _Finished App_:
-
+_________________________________
 ![Wireframe](https://i.imgur.com/mV4KuDg.png)
 _________________________________
 ![Wireframe](https://i.imgur.com/hY2kXt0.png)
