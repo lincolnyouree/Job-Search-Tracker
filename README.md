@@ -51,7 +51,7 @@ _________________________________
 * CSS
 * MongoDB/Mongoose
 * JSON Web Token Authorization
-* Chajr
 * Heroku
 * GitHub
+* Chajr
 _________________________________

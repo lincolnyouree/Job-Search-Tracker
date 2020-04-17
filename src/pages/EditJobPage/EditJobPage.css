@@ -1,4 +1,4 @@
-/* .editForm {
+.editForm {
     display: flex;
     flex-direction: column;
     width: 60vh;
@@ -45,4 +45,4 @@
 
 .back {
     color: rgb(32, 55, 69);
-} */
+}

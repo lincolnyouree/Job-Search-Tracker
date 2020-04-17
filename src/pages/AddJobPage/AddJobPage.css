@@ -1,4 +1,4 @@
-/* .addForm {
+.addForm {
     display: flex;
     flex-direction: column;
     width: 60vh;
@@ -40,4 +40,4 @@
     width: 20vh;
     border-width: .3vh;
     border-radius: 4vh;
-} */
+}
