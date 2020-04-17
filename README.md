@@ -24,13 +24,9 @@ _________________________________
 
 ![Wireframe](https://i.imgur.com/mV4KuDg.png)
 _________________________________
-![Wireframe](https://i.imgur.com/Ogi1TEM.png)
-_________________________________
-![Wireframe](https://i.imgur.com/tpVoIZw.png)
-_________________________________
 ![Wireframe](https://i.imgur.com/hY2kXt0.png)
 _________________________________
-![Wireframe](https://i.imgur.com/3KOqz02.png)
+![Wireframe](https://i.imgur.com/Ogi1TEM.png)
 _________________________________
 
 ### _User Experience_:
