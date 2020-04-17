@@ -1,43 +1,70 @@
 .addForm {
     display: flex;
     flex-direction: column;
-    width: 60vh;
-    height: 85vh;
-    border-width: .5vh;
+    width: 50vmin;
+    height: 88vmin;
+    border-width: .5vmin;
     border-color: rgb(32, 55, 69);
     border-style: solid;
-    padding: 10vh;
+    padding: 10vmin;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(159, 169, 175);
-
+    background-color: white;
 }
 
 .form-control {
     display: flex;
     flex-direction: column;
-    height: 1vh;
-    width: 30vh;
-    padding: 1.5vh;
+    height: 1vmin;
+    width: 30vmin;
+    padding: 1.5vmin;
     border-color: rgb(32, 55, 69);
 }
 
 .notes {
     display: flex;
     flex-direction: column;  
-    margin: 1vh;
-    height: 7vh;
-    width: 50vh;
-    padding: 1.5vh;
+    margin: 1vmin;
+    height: 7vmin;
+    width: 50vmin;
+    padding: 1.5vmin;
     border-color: rgb(32, 55, 69);
 }
 
 .addBtn {
     background-color: rgb(0, 190, 141);
-    color: white;
+    color: rgb(32, 55, 69);
     border-color: rgb(32, 55, 69);
-    height: 10vh;
-    width: 20vh;
-    border-width: .3vh;
-    border-radius: 4vh;
+    height: 10vmin;
+    width: 20vmin;
+    border-width: .3vmin;
+    border-radius: 4vmin;
+    padding: 3vmin;
 }
+
+.back {
+    color: rgb(32, 55, 69);
+}
+
+.addFormBorder {
+    border-width: .5vmin;
+    border-color: rgb(32, 55, 69);
+    border-style: solid;
+    height: 109vmin;
+    width: 72vmin;
+    padding: 2vmin;
+    background-color: rgb(159, 169, 175);
+}
+  
+.addFormOuterBorder {
+    height: 114vmin;
+    width: 77vmin;
+    padding: 2vmin;
+    background-color: rgb(32, 55, 69);
+}
+  
+.addHeader {
+    color: rgb(32, 55, 69);
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+  }

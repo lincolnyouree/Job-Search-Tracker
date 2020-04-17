@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   height: 10vmin;
+  padding: 2vmin;
 }
 
 .nav-container {
@@ -29,7 +30,7 @@
   grid-row-end: 2;
   text-align: center;
   line-height: 10vmin;
-  padding-right: 10vmin;
+  padding-right: 1vmin;
   justify-self: end;
   height: 10vmin;
   color: rgb(32, 55, 69);
@@ -38,4 +39,5 @@
 
 .NavBar-link {
   color: rgb(32, 55, 69);
+  padding: .5vmin;
 }

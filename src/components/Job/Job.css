@@ -1,70 +1,86 @@
-.deleteBtn {
-    background-color: rgb(0, 190, 141);
-    color: white;
+.jobCard {
+    display: flex;
+    flex-direction: column;
+    width: 40vmin;
+    height: 40vmin;
+    border-width: .5vmin;
     border-color: rgb(32, 55, 69);
-    height: 3vh;
-    width: 4vh;
-    border-width: .3vh;
-    border-radius: .5vh;
+    border-style: solid;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+.jobCardBorder {
+    border-width: .5vmin;
+    border-color: rgb(32, 55, 69);
+    border-style: solid;
+    height: 41vmin;
+    width: 41vmin;
+    padding: 2vmin;
+    background-color: rgb(159, 169, 175);
+}
+  
+.jobCardOuterBorder {
+    height: 46vmin;
+    width: 46vmin;
+    padding: 2vmin;
+    background-color: rgb(32, 55, 69);
+    border-color: white;
+    border-width: 1vmin;
+    border-style: solid;
+}
+
+.key {
     color: rgb(32, 55, 69);
 }
 
 .detailsLink {
+    display: flex;
     color: rgb(32, 55, 69);
+    justify-content: center;
 }
 
-h2 {
-    color: rgb(32, 55, 69);
+.deleteBtn {
+    background-color: rgb(0, 190, 141);
+    border-color: rgb(32, 55, 69);
+    height: 3vh;
+    width: 4vh;
+    margin: auto;
+    border-width: .3vh;
+    border-radius: .5vh;
 }
 
 .listCards {
     display: flex;
-    flex-direction: column;
-    width: 60vh;
-    height: 85vh;
-    border-width: .5vh;
-    border-color: rgb(32, 55, 69);
-    border-style: solid;
-    padding: 10vh;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(159, 169, 175);
-
+    flex-wrap: wrap; 
+    justify-content: center;
 }
 
-.form-control {
+.companyList {
     display: flex;
-    flex-direction: column;
-    height: 1vh;
-    width: 30vh;
-    padding: 1.5vh;
-    border-color: rgb(32, 55, 69);
+    flex-direction: row;
+    height: 7vmin;
+    width: 34vmin;
+    padding: .5vmin;
+    color: rgb(32, 55, 69);
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    justify-content: center;
 }
 
-.notes {
+.positionList {
     display: flex;
-    flex-direction: column;  
-    margin: 1vh;
-    height: 7vh;
-    width: 50vh;
-    padding: 1.5vh;
-    border-color: rgb(32, 55, 69);
+    flex-direction: row;
+    height: 5vmin;
+    width: 34vmin;
+    padding: .5vmin;
 }
 
-.addBtn {
-    background-color: rgb(0, 190, 141);
-    color: white;
-    border-color: rgb(32, 55, 69);
-    height: 10vh;
-    width: 20vh;
-    border-width: .3vh;
-    border-radius: 4vh;
-}
-
-.jobCard {
-    height: 20vmin;
-    width: 60vmin;
-    background-color: red;
-    border-style: solid;
-    border-color: yellow;
+.locationList {
+    display: flex;
+    flex-direction: row;
+    height: 5vmin;
+    width: 34vmin;
+    padding: .5vmin;
 }

@@ -3,21 +3,29 @@ import './Job.css';
 import {Link} from 'react-router-dom';
 
 const Job = (props) => (
-  <div className="form-control">
-      <h2>Job List:</h2>     
+  <div className="form-control-list">
+  <div><img src="'../../logo.png" alt="" className="logolist"/></div>
       <div className="listCards">
     {props.jobs.length ? 
       props.jobs.map((job, idx) =>
+      <div className="jobCardOuterBorder">
+      <div className="jobCardBorder">
       <div className="jobCard">
-        <li key={job._id}>
-            <dl>
+        <li key={job._id} className="key">
+          <div className="info">
+              <div className="companyList">
+              <dd>{job.company}</dd>
+              </div><br></br>
+              <div className="positionList">
               <dt>Position:</dt>
               <dd>{job.position}</dd>
-              <dt>Company:</dt>
-              <dd>{job.company}</dd>
+              </div><br></br>
+              <div className="locationList">
               <dt>Location:</dt>
               <dd>{job.location}</dd>
-            </dl>
+              </div>
+            </div><br></br>
+            <div className="detailsLink">
             <Link 
               className='detailsLink' 
               to={{
@@ -25,10 +33,13 @@ const Job = (props) => (
                 state: {job},
                 idx: idx
               }}>
-                Details/Edit
+                Details | Update
             </Link>
-              <button className='deleteBtn' onClick={() => props.handleDeleteJob(idx)}>X</button>
+            </div><br></br>
           </li>
+              <button className='deleteBtn' onClick={() => props.handleDeleteJob(idx)}>X</button>
+    </div>
+    </div>
     </div>
       )
       : <div></div>

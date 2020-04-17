@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './AddJobPage.css';
 
 class AddJobPage extends Component {
@@ -27,8 +28,10 @@ class AddJobPage extends Component {
   render() {
     return (
       <>
-        <h1>Add Job</h1>
+        <div className="addFormOuterBorder">
+        <div className="addFormBorder">
         <form className="addForm"ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+        <header className="addHeader">Add</header><br></br>
           <div className="form-group">
             <label>Position: </label>
             <input
@@ -89,8 +92,11 @@ class AddJobPage extends Component {
             disabled={this.state.invalidForm}
           >
             ADD JOB
-          </button>
+          </button>&nbsp;&nbsp;
+          <Link to='/' className="back">Cancel</Link>
         </form>
+        </div>
+        </div>
       </>
     );
   }

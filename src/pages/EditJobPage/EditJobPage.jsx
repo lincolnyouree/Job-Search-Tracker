@@ -28,8 +28,10 @@ class EditJobPage extends Component {
   render() {
     return (
       <>
-        <h1>Edit Job</h1>
+        <div className="editFormOuterBorder">
+        <div className="editFormBorder">
         <form className="editForm" ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+        <header className="editHeader">Edit</header><br></br>
           <div className="form-group">
             <label>Position:</label>
             <input
@@ -90,6 +92,8 @@ class EditJobPage extends Component {
           </button>&nbsp;&nbsp;
           <Link to='/' className="back">Cancel</Link>
         </form>
+          </div>
+          </div>
       </>
     );
   }
