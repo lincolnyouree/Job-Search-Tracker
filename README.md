@@ -9,7 +9,7 @@ _________________________________
 
 ### _Motivation_:
 
-As I transition into a new career field, I want to develop an efficient way to organize jobs of interest, applications submitted, and various notes about the interview process... 
+As I transition into a new career field, I want to develop an efficient way to organize jobs of interest, applications submitted, and notes about the interview process... 
 _________________________________
 
 ### _Entity Relationship Diagram_:
@@ -22,7 +22,11 @@ _________________________________
 
 ### _Finished App_:
 
-![Wireframe]()
+![Wireframe](https://i.imgur.com/Ogi1TEM.png)
+![Wireframe](https://i.imgur.com/mV4KuDg.png)
+![Wireframe](https://i.imgur.com/tpVoIZw.png)
+![Wireframe](https://i.imgur.com/hY2kXt0.png)
+![Wireframe](https://i.imgur.com/3KOqz02.png)
 _________________________________
 
 ### _User Experience_:
