@@ -1,24 +1,45 @@
-/* .NavBar {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 20px;
-  font-family: 'Roboto', sans-serif;}
+.NavBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 10vmin;
+}
 
-.NavBar-link {
-  margin: 0 10px;
+.nav-container {
+  width: 100%;
+}
+
+.navlogo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: start;
+}
+
+.navimg {
+  height: 10vmin;
+  width: 18vmin;
+}
+
+.navlinks {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+  line-height: 10vmin;
+  padding-right: 10vmin;
+  justify-self: end;
+  height: 10vmin;
   color: rgb(32, 55, 69);
-  font-family: 'Roboto', sans-serif;}
+  font-family: 'Roboto', sans-serif;
+}
 
-.NavBar-welcome {
-  color: rgb(159, 169, 175);
-  font-family: 'Roboto', sans-serif;}
+.NavBar-link-login {
+  color: rgb(32, 55, 69);
+}
 
-.logo {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    align-self: left;
-    justify-items: left;
-    height: 80vmin;
-    width: 200vmin;
-} */
+.NavBar-link-signup {
+  color: rgb(32, 55, 69);
+}
