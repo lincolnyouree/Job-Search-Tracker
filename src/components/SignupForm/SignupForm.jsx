@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import * as userAPI from '../../services/user-api';
+import './SignupForm.css';
 
 class SignupForm extends Component {
 
@@ -35,56 +36,65 @@ class SignupForm extends Component {
 
   render() {
     return (
-      <div>
-        <header>Sign Up</header>
+      <div className="signupFormOuterBorder">
+      <div className="signupFormBorder">
+      <div className="signupForm">
+        <header className="signupHeader">Sign Up</header><br></br>
         <form onSubmit={this.handleSubmit} >
           <div>
             <input 
+              className="form-control"
               type="text"
               placeholder="Name" 
               value={this.state.name} 
               name="name" 
               onChange={this.handleChange} 
             />
-          </div>
+          </div><br></br>
           <div>
             <input 
+              className="form-control"
               type="email"
               placeholder="Email" 
               value={this.state.email} 
               name="email" 
               onChange={this.handleChange}
             />
-          </div>
+          </div><br></br>
           <div>
             <input 
+              className="form-control"
               type="password" 
               placeholder="Password" 
               value={this.state.password} 
               name="password" 
               onChange={this.handleChange} 
             />
-          </div>
+          </div><br></br>
           <div className="form-group">
             <input 
+              className="form-control"
               type="password" 
               placeholder="Confirm Password" 
               value={this.state.passwordConf} 
               name="passwordConf" 
               onChange={this.handleChange} 
             />
-          </div>
+          </div><br></br>
           <div>
             <button 
-              className="btn btn-default" 
+              className="signupBtn" 
               disabled={this.isFormInvalid()}       
             >
               Sign Up
             </button>
             &nbsp;&nbsp;
-            <Link to='/'>Cancel</Link>
+            <br></br><br></br>
+            <Link to='/' className="cancelBtn">Cancel</Link>
           </div>
         </form>
+      </div>
+      </div>
       </div>
     );
   }

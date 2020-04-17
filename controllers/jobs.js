@@ -45,18 +45,6 @@ async function update(req, res) {
   });
 };
     
-  
-// 
-// async function update(req, res) {
-//   try {
-//     const updatedJob = await Job.findByIdAndUpdate(req.params.id, req.body, {new: true});
-//     res.status(200).json(updatedJob);
-//   }
-//   catch(err){
-//     res.status(500).json(err);
-//   }
-// }
-
 async function show(req, res) {
   try {
     const job = await Job.findById(req.params.id);

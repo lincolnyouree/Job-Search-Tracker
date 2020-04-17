@@ -3,5 +3,14 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-bottom: 50px;
+}
+
+.signuplogo {
+    display: flex;
+    height: 60vmin;
+    width: 60vmin;
+    align-items: center;
+    justify-content: center;
 }

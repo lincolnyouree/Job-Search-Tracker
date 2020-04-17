@@ -6,19 +6,19 @@ const NavBar = (props) => {
   let nav = props.user ?
     <div>
       <div className="logo"><img src="'../../logo.png" alt="" className="lego"/> </div>
-      <Link to='/addjob' className='NavBar-link'>Add Job</Link>
-      <Link to='/' className='NavBar-link'>All Jobs</Link>
-      <Link to='/about' className='NavBar-link'>About</Link>
+        <Link to='/addjob' className='NavBar-link'>Add Job</Link>
+        <Link to='/' className='NavBar-link'>All Jobs</Link>
+        <Link to='/about' className='NavBar-link'>About</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <Link to='' className='NavBar-link' onClick={props.handleLogout}>Logout</Link>
+        <Link to='/about' className='NavBar-link' onClick={props.handleLogout}>Logout</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <span className='NavBar-welcome'>Welcome, {props.user.name}</span>
     </div>
     :
     <div>
-      <Link to='/login' className='NavBar-link'>Login</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <Link to='/signup' className='NavBar-link'>Sign up</Link>
+        <Link to='/login' className='NavBar-link'>Login</Link>
+           &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to='/signup' className='NavBar-link'>Sign up</Link>
     </div>;
   return (
     <div className='NavBar'>

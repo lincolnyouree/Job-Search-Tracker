@@ -2,16 +2,12 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './EditJobPage.css';
 
-
 class EditJobPage extends Component {
   state = {
       invalidForm: false,
       formData: 
-      this.props.location.state.job,
-      // position: '',
-    
+      this.props.location.state.job,    
     idx: this.props.location.idx
-      // invalidForm: false,
   };
 
   formRef = React.createRef();
