@@ -22,11 +22,11 @@ _________________________________
 
 ### _Finished App_:
 _________________________________
-![Wireframe](https://i.imgur.com/mV4KuDg.png)
-_________________________________
-![Wireframe](https://i.imgur.com/hY2kXt0.png)
-_________________________________
 ![Wireframe](https://i.imgur.com/Ogi1TEM.png)
+_________________________________
+![Wireframe](https://i.imgur.com/MtdZc59.png)
+_________________________________
+![Wireframe](https://i.imgur.com/gVOww7l.png)
 _________________________________
 
 ### _User Experience_:
