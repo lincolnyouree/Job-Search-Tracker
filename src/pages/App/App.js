@@ -27,7 +27,6 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({user: userAPI.getUser()});
     this.componentDidMount();
-    
   }
 
   async componentDidMount() {

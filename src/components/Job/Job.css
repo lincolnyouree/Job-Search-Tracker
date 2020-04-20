@@ -48,6 +48,7 @@
     margin: auto;
     border-width: .3vh;
     border-radius: .5vh;
+    outline: none;
 }
 
 .listCards {
