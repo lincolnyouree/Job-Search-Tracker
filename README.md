@@ -23,9 +23,7 @@ _________________________________
 ### _Finished App_:
 _________________________________
 ![Wireframe](https://i.imgur.com/MtdZc59.png)
-_________________________________
 ![Wireframe](https://i.imgur.com/mV4KuDg.png)
-_________________________________
 ![Wireframe](https://i.imgur.com/gVOww7l.png)
 _________________________________
 
@@ -42,7 +40,7 @@ _________________________________
 
 ### _Future Updates_:
 
-* Ability to add and Delete Photos.
+* Ability to add and delete photos.
 * Consume data from a third-party API.
 * Mobile responsiveness.
 _________________________________
