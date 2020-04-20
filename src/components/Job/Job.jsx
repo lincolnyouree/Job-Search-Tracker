@@ -11,7 +11,7 @@ const Job = (props) => (
       <div className="jobCardOuterBorder">
       <div className="jobCardBorder">
       <div className="jobCard">
-        <li key={job._id} className="key">
+        <div key={job._id} className="key">
           <div className="info">
               <div className="companyList">
               <dd>{job.company}</dd>
@@ -36,7 +36,7 @@ const Job = (props) => (
                 Details | Update
             </Link>
             </div><br></br>
-          </li>
+          </div>
               <button className='deleteBtn' onClick={() => props.handleDeleteJob(idx)}>X</button>
     </div>
     </div>
